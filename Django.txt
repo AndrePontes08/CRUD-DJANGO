@@ -1,0 +1,48 @@
+passo a passo:
+---------------------------------------------------------------------------
+abrir power shell como admin -> (Set-ExecutionPolicy Unrestricted)
+verificar a versão do python
+Criar um ambiente virtual (python3 -m venv ./env)
+Ativar o ambiente virtual (./env/scripts/activate)
+Instalação do Django (pip install Django)
+verificar a versão do Django instalada (python -m django --version)
+guardar as dependências (pip freeze > requeriments.txt)
+Após concluir projeto desativar maquina virtual -> (./env/scripts/deactivate)
+Após concluir projeto redefinir as configurações do power shell -> (Set-ExecutionPolicy <política original>) ou (restricted)
+---------------------------------------------------------------------------
+Criar um projeto Django (django-admin startproject projeto1)
+fazer as configurações do settings.py (arquivos estáticos e templates)
+criação de um aplicativo dentro do projeto Django (python manage.py startapp app1)
+configurar as urls
+criar uma view (index)
+criar a pasta de templates
+----------------------------------------------------------------------------------------
+Criar migrações do model User (python manage.py makemigrations)
+aplicar as migrações (python manage.py migrate)
+----------------------------------------------------------------------------------------
+python shell (python manage.py shell) verificação de criação de tabelas
+ex -> criar um usuario-> user = User(nome= "andre pontes",telefone=83999551725,email="andrepontesvazdemedeiros@")
+salvar o usuario ->> user.save()
+mostrar o Id do usuario ->> user.id
+criar um perfil administrador(super usuário) ->(python manage.py createsuperuser)
+registrar models no admin.py (app1)
+-----------------------------------------------------------------------------------------
+erro na inserção de dados :
+mudar  o campo no models
+criar migrações do model User (python manage.py makemigrations)
+aplicar as migrações (python manage.py migrate)
+-------------------------------------------------------------------------------------------
+criar template
+-------------------------------------------------------------------------------------------
+
+criar formulário
+
+testar formulário
+s
+Jinja (engine de template) -> código no template
+
+bootstrap(css pré pronto)
+
+
+
+subir a aplicação (python manage.py runserver)
